@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Biodata</title>
+    <style>
+        table {
+            font-family: Arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            border: 4px solid #000000;
+        }
+
+        td, th {
+            border: 4px solid #000000;
+            text-align: left;
+            padding: 12px;
+            color: #000000;
+        }
+
+        th {
+            background-color: #4CAF50; 
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        td {
+            background-color: #f2f4f7;
+        }
+
+        .tabel-kedua {
+            margin-top: 40px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-bold {
+            font-weight: bold;
+        }
+
+        /* Container untuk membuat split cell berjarak di dalam satu sel */
+        .split-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Jarak antar kotak/cell */
+        }
+
+        /* Styling kotak split cell di dalam */
+        .sub-cell {
+            border: 2px solid #000000;
+            padding: 8px 12px;
+            background-color: #ffffff;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tabel Pertama: Biodata -->
+    <table>
+        <tr>
+            <th class="text-bold">Field/atribut</th>
+            <th class="text-bold">Keterangan/Hasil Input</th>
+        </tr>
+        <tr>
+            <td class="text-bold">Nama:</td>
+            <td>Dwi Krisnandi Ardiansyah</td>
+        </tr>
+        <tr>
+            <td class="text-bold">Alamat:</td>
+            <td>JL.Rimnam Village</td>
+        </tr>
+        <tr>
+            <td class="text-bold">Jenis kelamin:</td>
+            <td>Laki-laki</td>
+        </tr>
+        <tr>
+            <td class="text-bold">Jurusan:</td>
+            <td>RPL</td>
+        </tr>
+        <tr>
+            <td class="text-bold">Tinggi badan (cm):</td>
+            <td>167</td>
+        </tr>
+        <tr>
+            <td class="text-bold">Berat badan (kg):</td>
+            <td>67</td>
+        </tr>
+        <tr>
+            <td class="text-bold">Hobi:</td>
+            <td>Mancing Perkoro</td> 
+        </tr>
+        <tr>
+            <td class="text-bold">No HP:</td>
+            <td>086767676767</td>
+        </tr>
+    </table>
+
+    <!-- Tabel Kedua: Split Cell dengan Jarak (Spacing) -->
+    <table class="tabel-kedua">
+        <tr>
+            <th class="text-bold text-center">Nama Slot</th>
+            <th class="text-bold text-center">Atribut</th>
+            <th class="text-bold text-center">Hasil / Keterangan</th>
+        </tr>
+        
+        <!-- Slot A: Identitas Diri -->
+        <tr>
+            <td rowspan="3" class="text-bold text-center">Identitas Diri</td>
+            <td class="text-bold">Nama</td>
+            <td>Dwi Krisnandi Ardiansyah</td>
+        </tr>
+        <tr>
+            <td class="text-bold">Alamat</td>
+            <td>JL.Rimnam Village</td>
+        </tr>
+        <tr>
+            <td class="text-bold">No HP</td>
+            <td>086767676767</td>
+        </tr>
+
+        <!-- Slot B: Akademik -->
+        <tr>
+            <td class="text-bold text-center">Akademik</td>
+            <td class="text-bold">Jurusan</td>
+            <td>RPL</td>
+        </tr>
+
+        <!-- Slot C: Preferensi -->
+        <tr>
+            <td class="text-bold text-center">Preferensi</td>
+            <td class="text-bold">Jenis Kelamin</td>
+            <td>Laki-laki</td>
+        </tr>
+
+        <!-- Slot D: Data Fisik (Split Cell Internal dengan Jarak/Gap) -->
+        <tr>
+            <td class="text-bold text-center">Data Fisik</td>
+            <td class="text-bold">Pengukuran Badan</td>
+            <td>
+                <div class="split-container">
+                    <div class="sub-cell"><strong>Tinggi Badan:</strong> 167 cm</div>
+                    <div class="sub-cell"><strong>Berat Badan:</strong> 67 kg</div>
+                </div>
+            </td>
+        </tr>
+<!-- Slot E: Lain-lain -->
+        <tr>
+            <td class="text-bold text-center">Lain-lain</td>
+            <td class="text-bold">Hobi</td>
+            <td>Mancing Perkoro</td>
+        </tr>
+    </table>
+
+</body>
+</html>
